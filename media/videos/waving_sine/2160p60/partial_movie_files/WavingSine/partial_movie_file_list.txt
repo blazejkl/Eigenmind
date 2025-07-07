@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/waving_sine/2160p60/partial_movie_files/WavingSine/2705491723_70707270_325529662.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/waving_sine/2160p60/partial_movie_files/WavingSine/841296557_1754310298_1649231484.mp4'

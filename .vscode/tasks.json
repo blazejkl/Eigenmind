@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "↻ Render Manim Scene",
+        "type": "shell",
+        "command": "manim -pql \"${file}\" ${fileBasenameNoExtension}",
+        "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "panel": "shared"
+        },
+        "problemMatcher": [],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+]
+}
