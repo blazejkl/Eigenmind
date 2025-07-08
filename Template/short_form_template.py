@@ -119,6 +119,7 @@ class ShortFormTemplate(BaseScene):
             hook.to_edge(UP, buff=-6)
             hook.set_z_index(5)
             self.play(Write(hook, run_time=0.8))
+            self.hook_obj = hook        #  <──  zapisz referencję
             y_cursor = hook
 
         if self.CONTENT_TEXT:
@@ -126,12 +127,14 @@ class ShortFormTemplate(BaseScene):
             content.next_to(y_cursor, DOWN, buff=0.5)
             content.set_z_index(5)
             self.play(Write(content, run_time=1))
+            self.content_obj = content
             y_cursor = content
 
         if self.OUTRO_TEXT:
-            outro = Text(self.OUTRO_TEXT, font_size=56, color=ORANGE)
+            outro = Text(self.OUTRO_TEXT, font_size=50, color=ORANGE)
             outro.to_edge(DOWN, buff=-4)
             outro.set_z_index(5)
+            self.outro_obj = outro
             self.play(Write(outro, run_time=0.8))
 
         self.wait(0.2)
