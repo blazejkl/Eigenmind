@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/euler_wave/1920p60/partial_movie_files/EulerWaveStage1/409232588_202134664_223132457.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/euler_wave/1920p60/partial_movie_files/EulerWaveStage1/1206059338_3201849554_4157129642.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/euler_wave/1920p60/partial_movie_files/EulerWaveStage1/1206059338_4036220240_487910825.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/euler_wave/1920p60/partial_movie_files/EulerWaveStage1/1206059338_807188262_3500898346.mp4'
