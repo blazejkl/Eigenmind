@@ -12,6 +12,8 @@ Features
 import os
 from manim import (
     config,
+    VGroup,
+    Rectangle,
     SVGMobject,
     ImageMobject,
     Text,
@@ -19,6 +21,8 @@ from manim import (
     UR,
     UP,
     DOWN,
+    LEFT,
+    RIGHT,
 )
 
 # ---------------------------------------------------------------------------
@@ -33,6 +37,34 @@ config.background_color = DARK_BG = "#121212"
 LIGHT_TEXT = "#E0E0E0"
 ORANGE = "#FF5722"
 PURPLE = "#673AB7"
+
+# ─── konfiguracja wysokości masek (w jednostkach sceny) ───
+MASK_UP    = 8    # ile jednostek “od góry” zasłonić
+MASK_DOWN  = 8    # ile od dołu
+
+def _add_frame_mask(scene):
+    """
+    Dodaje dwie czarne ramki:
+    ▬ górną wysokości MASK_UP,
+    ▬ dolną wysokości MASK_DOWN,
+    przyklejone do krawędzi ekranu.
+    Szerokość = pełny kadr.
+    """
+    color = DARK_BG           # kolor tła kanału / sceny
+
+    top_mask = Rectangle(
+        width=50, height=MASK_UP,
+        fill_color=color, fill_opacity=1, stroke_opacity=0
+    ).to_edge(UP, buff=-9)
+
+    bottom_mask = Rectangle(
+        width=50, height=MASK_DOWN,
+        fill_color=color, fill_opacity=1, stroke_opacity=0
+    ).to_edge(DOWN, buff=-9)
+
+    # warstwa nad animacją, pod LOGO/HOOK
+    masks = VGroup(top_mask, bottom_mask).set_z_index(1)
+    scene.add(masks)
 
 # ---------------------------------------------------------------------------
 # Base scene class
@@ -57,6 +89,10 @@ class ShortFormTemplate(BaseScene):
     OUTRO_TEXT: str | None = "Call to Action"
 
     def construct(self):
+
+        # maska nad wszystkimi obiektami podklasy,
+        # ale pod hook / content / logo
+        _add_frame_mask(self)
         
         # -------------------------------------------------------------------
         # λ‑watermark (always visible, brand colours preserved)
@@ -72,6 +108,7 @@ class ShortFormTemplate(BaseScene):
         )
         logo.scale(0.15)
         logo.to_edge(DOWN, buff=-7)
+        logo.set_z_index(5)
         self.add_foreground_mobject(logo)
         
         # -------------------------------------------------------------------
@@ -80,18 +117,21 @@ class ShortFormTemplate(BaseScene):
         if self.HOOK_TEXT:
             hook = Text(self.HOOK_TEXT, font_size=100, color=LIGHT_TEXT)
             hook.to_edge(UP, buff=-6)
+            hook.set_z_index(5)
             self.play(Write(hook, run_time=0.8))
             y_cursor = hook
 
         if self.CONTENT_TEXT:
             content = Text(self.CONTENT_TEXT, font_size=50, color=LIGHT_TEXT)
             content.next_to(y_cursor, DOWN, buff=0.5)
+            content.set_z_index(5)
             self.play(Write(content, run_time=1))
             y_cursor = content
 
         if self.OUTRO_TEXT:
             outro = Text(self.OUTRO_TEXT, font_size=56, color=ORANGE)
             outro.to_edge(DOWN, buff=-4)
+            outro.set_z_index(5)
             self.play(Write(outro, run_time=0.8))
 
         self.wait(0.2)
