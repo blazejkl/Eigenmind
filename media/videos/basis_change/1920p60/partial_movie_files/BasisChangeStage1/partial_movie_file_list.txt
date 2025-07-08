@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/409232588_2059841223_1331535754.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_3152910415_1042845246.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_1165088483_689528083.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_4282937366_2988716908.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_4027999242_479438124.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_3152910415_3737538068.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_2764577687_2772958198.mp4'
+file 'file:/Users/blazej_klepacki/Documents/Repo/Eigenmind/media/videos/basis_change/1920p60/partial_movie_files/BasisChangeStage1/1206059338_3201849554_3401060750.mp4'
