@@ -115,7 +115,7 @@ class ShortFormTemplate(BaseScene):
         # Optional placeholders (displayed only if text provided)
         # -------------------------------------------------------------------
         if self.HOOK_TEXT:
-            hook = Text(self.HOOK_TEXT, font_size=100, color=LIGHT_TEXT)
+            hook = Text(self.HOOK_TEXT, font_size=90, color=LIGHT_TEXT)
             hook.to_edge(UP, buff=-6)
             hook.set_z_index(5)
             self.play(Write(hook, run_time=0.8))
